@@ -1,5 +1,7 @@
 import 'babel-polyfill';
-import Gpio from 'tm-onoff';
+//import Gpio from 'onoff';
+
+const Gpio = require('onoff').Gpio; 
 
 const receiverIR = new Gpio(18, 'in', 'both');
 

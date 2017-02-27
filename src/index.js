@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-//import Gpio from 'onoff';
+//import {Gpio} from 'onoff';
 
 const Gpio = require('onoff').Gpio; 
 

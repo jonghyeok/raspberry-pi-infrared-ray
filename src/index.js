@@ -8,7 +8,7 @@ var sensor = require('node-dht-sensor');
 setInterval(showTemp, 1000);
 
 
-function showTemp = function(){
+var showTemp = function(){
 
   sensor.read(22, 18, function(err, temperature, humidity) {
       if (!err) {

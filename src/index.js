@@ -3,19 +3,19 @@ import 'babel-polyfill';
 
 var sensor = require('node-dht-sensor');
 
-  console.info("System is started now!");
+setTimeout(loop, 1000);
 
-setInterval(showTemp, 1000);
-
-
-var showTemp =  sensor.read(22, 18, function(err, temperature, humidity) {
+function loop() {
+  sensor.read(22, 18, function(err, temperature, humidity) {
       if (!err) {
           console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
               'humidity: ' + humidity.toFixed(1) + '%'
           );
       }
-});
+  });
 
+  setTimeout(loop, 1000);
+}
 
 
 

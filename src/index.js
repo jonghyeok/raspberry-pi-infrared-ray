@@ -5,7 +5,7 @@ var sensor = require('node-dht-sensor');
 
   console.info("System is started now!");
 
-setInterval(showTemp}, 1000);
+setInterval(showTemp, 1000);
 
 
 function showTemp = function(){

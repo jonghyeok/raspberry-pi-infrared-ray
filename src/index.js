@@ -6,7 +6,7 @@ var sensor = require('node-dht-sensor');
 var http = require('http');
 http.post = require('http-post');
 
-setTimeout(loop, 600000);
+setTimeout(loop, 60000);
 
 function loop() {
   sensor.read(22, 18, function(err, temperature, humidity) {
@@ -24,7 +24,7 @@ function loop() {
       }
   });
 
-  setTimeout(loop, 600000);
+  setTimeout(loop, 60000);
 }
 
 
